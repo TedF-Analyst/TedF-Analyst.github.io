@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Web Scraping</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Untitled4</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -5355,10 +5355,10 @@ span.bp3-icon:empty{
   content:"⌄"; }
 
 .bp3-icon-caret-left::before{
-  content:"〈"; }
+  content:"〈"; }
 
 .bp3-icon-caret-right::before{
-  content:"〉"; }
+  content:"〉"; }
 
 .bp3-icon-caret-up::before{
   content:"⌃"; }
@@ -14580,7 +14580,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First, you need to download these libraries</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get some new libraries first</span>
 <span class="c1"># pip install selenium</span>
 <span class="c1"># pip install openpyxl</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
@@ -14589,15 +14589,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
 <span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">load_workbook</span>
 
-<span class="n">driverpath</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/Ted/Desktop/Programming/PYTHON/chromedriver&quot;</span>  <span class="c1"># Write here your own path of chromedriver.exe</span>
+<span class="n">driverpath</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/Ted/Desktop/Programming/PYTHON/chromedriver&quot;</span>  <span class="c1"># Path of chromedriver.exe</span>
 <span class="n">ser</span> <span class="o">=</span> <span class="n">Service</span><span class="p">(</span><span class="n">driverpath</span><span class="p">)</span>
 <span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">ChromeOptions</span><span class="p">()</span>
 <span class="c1">#options.headless = True        # If you don&#39;t want to see Chrome while code is running, remove the comment symbol at the beginning of the line</span>
-<span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--user-data-dir=C:/Users/Ted/AppData/Local/Google/Chrome/User Data/Default&#39;</span><span class="p">)</span>  <span class="c1"># Write the path of the default Chrome folder</span>
+<span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--user-data-dir=C:/Users/Ted/AppData/Local/Google/Chrome/User Data/Default&#39;</span><span class="p">)</span>  <span class="c1"># Path of the default Chrome folder</span>
 <span class="n">options</span><span class="o">.</span><span class="n">add_experimental_option</span><span class="p">(</span><span class="s2">&quot;detach&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="n">ser</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
 
-<span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/Ted/Desktop/wdrv.xlsx&quot;</span>  <span class="c1"># Write here your own file path with its extension</span>
+<span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/Ted/Desktop/wdrv.xlsx&quot;</span>  <span class="c1"># Path for song file</span>
 <span class="n">google</span> <span class="o">=</span> <span class="s2">&quot;https://www.google.com/&quot;</span>
 <span class="n">wikipedia</span> <span class="o">=</span> <span class="s2">&quot;https://www.wikipedia.org&quot;</span>
 
@@ -14611,7 +14611,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <span class="n">album</span> <span class="o">=</span> <span class="s2">&quot;Unknown&quot;</span>
     <span class="n">release_date</span> <span class="o">=</span> <span class="s2">&quot;Unknown&quot;</span>
 
-    <span class="c1"># Searching on Google</span>
+    <span class="c1"># Search on Google</span>
     <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
     <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">song_artist</span><span class="p">)</span>
     <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="o">.</span><span class="n">ENTER</span><span class="p">)</span>
@@ -14624,16 +14624,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             <span class="n">album</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s2">&quot;//*[@data-attrid=&#39;kc:/music/album:artist&#39;]//*[@class=&#39;fl&#39;]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>     <span class="c1"># If Google did not return results</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="c1"># Searching on Wikipedia</span>
+                <span class="c1"># Search on Wikipedia</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">song_artist</span> <span class="o">+</span> <span class="s2">&quot; site:&quot;</span> <span class="o">+</span> <span class="n">wikipedia</span><span class="p">)</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="o">.</span><span class="n">ENTER</span><span class="p">)</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;LC20lb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
                 <span class="n">album</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s2">&quot;//th[@class=&#39;infobox-header description&#39;]//i//a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
             <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m sorry. Not found.&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not found&quot;</span><span class="p">)</span>
             <span class="k">finally</span><span class="p">:</span>
-                <span class="c1"># Go back to Google Search again</span>
+                <span class="c1"># Go back to Google and search again</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">song_artist</span><span class="p">)</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="o">.</span><span class="n">ENTER</span><span class="p">)</span>
@@ -14646,7 +14646,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             <span class="n">release_date</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s2">&quot;//*[@data-attrid=&#39;kc:/music/album:release date&#39;]//*[@class=&#39;LrzXr kno-fv wHYlTd z8gr9e&#39;]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>     <span class="c1"># If Google did not return results</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="c1"># Searching on Wikipedia</span>
+                <span class="c1"># Search on Wikipedia</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">google</span><span class="p">)</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">song_artist</span> <span class="o">+</span> <span class="s2">&quot; site:&quot;</span> <span class="o">+</span> <span class="n">wikipedia</span><span class="p">)</span>
                 <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;gLFyf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">Keys</span><span class="o">.</span><span class="n">ENTER</span><span class="p">)</span>
