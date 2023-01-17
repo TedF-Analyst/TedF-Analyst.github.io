@@ -2624,7 +2624,7 @@ input, select, textarea {
 			width: 100%;
 		}
 .image:hover {
-  transform: scale(1.5);
+  transform: scale(2);
 	z-index: 1;/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
